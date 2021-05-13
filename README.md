@@ -4,9 +4,9 @@
 ## Installation (tested on 64-bit version of Windows)
 1) download the contents of the repository (green button in the upper right corner)
 2) go to _installer_ folder and double click on _python-3.9.0-amd64.exe_ file
-3) follow the instructions - however, make sure that <i>Add Python 3.9 to PATH</i> is checked (see below)
-5) open the folder and double click on <i>setup.bat</i>
-6) when the installation of the modules is finished, go to the _bin_ folder and run the application (<i>HARDIS.exe</i> - if this fails, run <i>HARDIS3.exe</i>)
+3) follow the instructions - however, make sure that _Add Python 3.9 to PATH_ is checked (see below)
+5) open the folder and double click on _setup.bat_
+6) when the installation of the modules is finished, go to the _bin_ folder and run the application (_HARDIS.exe_ - if this fails, run _HARDIS3.exe_)
 <p align="center"> 
   <img src="https://github.com/daniellechowicz/hardis-gui/blob/main/img/installer.png">
 </p>
@@ -30,3 +30,6 @@ Batch analysis enables automated analysis of all files. However, it is important
 <p align="center"> 
   <img src="https://github.com/daniellechowicz/hardis-gui/blob/main/img/figure.png">
 </p>
+
+## How do I get the index?
+For example, let's take a file named: 039_BE_0-05_010.txt. In this case, the velocity is 10 and the index equals 13. Remember that the numbering starts at 0.
