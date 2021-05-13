@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>HARDIS | Cutting force analysis</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/loupe.png</normaloff>icons/loupe.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(62, 101, 190, 255), stop:1 rgba(81, 47, 154, 255));
+border-radius: 10px;</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>18</number>
+       </property>
+       <property name="topMargin">
+        <number>18</number>
+       </property>
+       <property name="rightMargin">
+        <number>18</number>
+       </property>
+       <property name="bottomMargin">
+        <number>18</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="title_label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);
+font-size: 16pt;
+font-family: &quot;Segoe UI Light&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Automatic cutting force analysis</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="message_label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);
+font-size: 14pt;
+font-family: &quot;Segoe UI Light&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Fill in required fields</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="channel_field">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+height: 30px;
+font-size: 12pt;
+font-family: &quot;Segoe UI Light&quot;;
+padding-left: 10px;
+padding-bottom: 5px;
+border-bottom: 2px solid rgb(255, 255, 255);
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+
+QLineEdit:hover {
+border: 2px solid rgb(255, 255, 255);
+border-radius: 17.5px;
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(0, 255, 213);
+border-radius: 17.5px;
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Channel corresponding to normal force</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="cs_field">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+height: 30px;
+font-size: 12pt;
+font-family: &quot;Segoe UI Light&quot;;
+padding-left: 10px;
+padding-bottom: 5px;
+border-bottom: 2px solid rgb(255, 255, 255);
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+
+QLineEdit:hover {
+border: 2px solid rgb(255, 255, 255);
+border-radius: 17.5px;
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(0, 255, 213);
+border-radius: 17.5px;
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Cutting speed index used in file naming</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="fs_field">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+height: 30px;
+font-size: 12pt;
+font-family: &quot;Segoe UI Light&quot;;
+padding-left: 10px;
+padding-bottom: 5px;
+border-bottom: 2px solid rgb(255, 255, 255);
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+
+QLineEdit:hover {
+border: 2px solid rgb(255, 255, 255);
+border-radius: 17.5px;
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(0, 255, 213);
+border-radius: 17.5px;
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Sampling rate in [Hz]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="close_button">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+color: #ffffff;
+background-color: rgb(255, 0, 127);
+height: 30px;
+padding-left: 10px;
+padding-bottom: 5px;
+border-radius: 17.0px;
+font-size: 12pt;
+font-family: &quot;Segoe UI Light&quot;;
+}
+
+QPushButton:hover {
+border: 2px solid rgb(255, 255, 255)
+}
+
+QPushButton:pressed {
+color: rgba(255, 255, 255, 0.5);
+background-color: rgba(255, 0, 127, 0.5);
+}</string>
+            </property>
+            <property name="text">
+             <string>Close</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="single_button">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+color: #ffffff;
+background-color: rgb(255, 170, 0);
+height: 30px;
+padding-left: 10px;
+padding-bottom: 5px;
+border-radius: 17.0px;
+font-size: 12pt;
+font-family: &quot;Segoe UI Light&quot;;
+}
+
+QPushButton:hover {
+border: 2px solid rgb(255, 255, 255)
+}
+
+QPushButton:pressed {
+color: rgba(255, 255, 255, 0.5);
+background-color: rgba(255, 170, 0, 0.5);
+}</string>
+            </property>
+            <property name="text">
+             <string>Single analysis</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="batch_button">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+color: #ffffff;
+background-color: rgb(0, 221, 51);
+height: 30px;
+padding-left: 10px;
+padding-bottom: 5px;
+border-radius: 17.0px;
+font-size: 12pt;
+font-family: &quot;Segoe UI Light&quot;;
+}
+
+QPushButton:hover {
+border: 2px solid rgb(255, 255, 255)
+}
+
+QPushButton:pressed {
+color: rgba(255, 255, 255, 0.5);
+background-color: rgba(0, 221, 51, 0.5);
+}</string>
+            </property>
+            <property name="text">
+             <string>Batch analysis</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="footer">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>All Rights Reserved © 2021 Kompetenzzentrum Holz GmbH</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
