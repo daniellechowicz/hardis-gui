@@ -8,7 +8,7 @@
 <p align="center"> 
   <img src="https://github.com/daniellechowicz/hardis-gui/blob/main/img/installer.png">
 </p>
-5) open the folder and double click on _setup.bat_ file 
+5) open the folder and double click on _setup.bat_ file
 6) when the installation of the modules is finished, go to the _bin_ folder and run the application (_HARDIS.exe_ - if this fails, run _HARDIS3.exe_)
 
 ## Manual
