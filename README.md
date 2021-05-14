@@ -31,5 +31,10 @@ Batch analysis enables automated analysis of all files. However, it is important
   <img src="https://github.com/daniellechowicz/hardis-gui/blob/main/img/figure.png">
 </p>
 
-## How do I get the index?
+## Additional remarks
+
+### How do I get the index?
 For example, let's take a file named: 039_BE_0-05_010.txt. In this case, the velocity is 10 and the index equals 13. Remember that the numbering starts at 0.
+
+### Settings
+You can change access some settings of the application in _settings.py_, e.g. filter's cutoff frequency and order. Follow the instructions in the comments in the mentioned file.
