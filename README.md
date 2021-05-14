@@ -37,4 +37,7 @@ Batch analysis enables automated analysis of all files. However, it is important
 For example, let's take a file named: 039_BE_0-05_010.txt. In this case, the velocity is 10 and the index equals 13. Remember that the numbering starts at 0.
 
 ### Settings
-You can change access some settings of the application in _settings.py_, e.g. filter's cutoff frequency and order. Follow the instructions in the comments in the mentioned file.
+You can change access some settings of the application in _settings.py_, e.g. filter's cutoff frequency and order (the effect of changing the filter cutoff frequency is shown below). Follow the instructions in the comments in the mentioned file.
+<p align="center"> 
+  <img src="https://github.com/daniellechowicz/hardis-gui/blob/main/img/cutoff_frequency_changed.png">
+</p>

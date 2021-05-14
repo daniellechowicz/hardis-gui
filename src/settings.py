@@ -4,7 +4,7 @@ DECIMALS_MEDIAN = 2
 DECIMALS_STD = 3
 
 # Butterworth low pass filter
-CUTOFF_FREQUENCY = 1500
+CUTOFF_FREQUENCY = 3500
 ORDER = 3
 
 # Figure 
