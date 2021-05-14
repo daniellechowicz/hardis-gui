@@ -1,3 +1,4 @@
+from settings import *
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -19,8 +20,8 @@ class Plotter(object):
 
         props = dict(boxstyle="round", facecolor="wheat", alpha=0.5)
 
-        show_from = start - 1000
-        show_to = stop + 1000
+        show_from = start - WINDOW
+        show_to = stop + WINDOW
 
         fig, ax = plt.subplots(figsize=(10, 5))
         ax.plot(t, data_original, linewidth=0.5, color="dodgerblue", alpha=0.5)

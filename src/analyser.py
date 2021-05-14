@@ -26,15 +26,3 @@ class Analyser(object):
         finish = start + cutting_duration
 
         return start, finish
-
-    def peak_analyser(self, data):
-        # Find start and finish points
-        start, finish = self.process_scanner(data)
-        data = data[start:finish]
-
-        # Find peaks
-        rmsValue = np.sqrt(np.mean(data ** 2))
-        peaksHD, _ = find_peaks(data, height=rmsValue, distance=10)
-        peaksHD = peaksHD + start
-
-        return peaksHD

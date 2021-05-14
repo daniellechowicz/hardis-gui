@@ -204,22 +204,21 @@ class Batch:
             analyser_ = analyser.Analyser(fs=self.fs, cutting_speed=cs)
             start, stop = analyser_.process_scanner(data_corrected)
 
-            if self.enable_charts == True:
-                # Plot (zoom into cutting range)
-                self.plotter_.plot(
-                    filename=filename,
-                    data_original=data_raw,
-                    data_corrected=data_corrected,
-                    start=start,
-                    stop=stop,
-                )
+            # Plot (zoom into cutting range)
+            self.plotter_.plot(
+                filename=filename,
+                data_original=data_raw,
+                data_corrected=data_corrected,
+                start=start,
+                stop=stop,
+            )
 
             # Save
             database.Database(DB_NAME).insert_into_table(
                 filename,
-                round(np.mean(data_corrected[start:stop]), 2),
-                round(np.median(data_corrected[start:stop]), 2),
-                round(np.std(data_corrected[start:stop]), 3),
+                round(np.mean(data_corrected[start:stop]), DECIMALS_MEAN),
+                round(np.median(data_corrected[start:stop]), DECIMALS_MEDIAN),
+                round(np.std(data_corrected[start:stop]), DECIMALS_STD),
             )
 
         database.Database(DB_NAME).save_as_CSV()
@@ -246,8 +245,6 @@ class MainWindow(QMainWindow, Batch):
         self.channel = 0
         self.fs = 0
         self.cs_index = 0
-        self.enable_charts = False
-        self.enable_writing = False
 
     def show_single_window(self):
         # Show main window
