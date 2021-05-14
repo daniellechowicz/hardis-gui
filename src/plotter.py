@@ -11,10 +11,9 @@ class Plotter(object):
 
         textstr = "\n".join(
             (
-                r"$\mathrm{mean}=%.2f$ N" % (np.mean(data_corrected[start:stop])),
-                r"$\mathrm{median}=%.2f$ N" % (np.median(data_corrected[start:stop])),
-                r"$\mathrm{std}=%.2f$ N" % (np.std(data_corrected[start:stop])),
-                r"$\mathrm{max}=%.2f$ N" % (max(data_corrected[start:stop])),
+                r"$\mathrm{mean}=%s$ N" % str(round(np.mean(data_corrected[start:stop]), DECIMALS_MEAN)),
+                r"$\mathrm{median}=%s$ N" % str(round(np.median(data_corrected[start:stop]), DECIMALS_MEDIAN)),
+                r"$\mathrm{std}=%s$ N" % str(round(np.std(data_corrected[start:stop]), DECIMALS_STD))
             )
         )
 

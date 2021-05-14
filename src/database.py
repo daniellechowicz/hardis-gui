@@ -44,7 +44,7 @@ class Database:
 
     def save_as_CSV(self):
         db = pd.read_sql_query("SELECT * FROM data;", self.connection)
-        db.to_csv("../data/{}.csv".format(CSV_NAME), index=False)
+        db.to_csv("../data/{}.csv".format(str(datetime.datetime.now().strftime(DATE_FORMAT))), index=False)
 
     def delete(self):
         self.connection.close()

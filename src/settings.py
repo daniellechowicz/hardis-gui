@@ -1,6 +1,3 @@
-import datetime
-
-
 # Specify the number of decimal places for each value
 DECIMALS_MEAN = 2
 DECIMALS_MEDIAN = 2
@@ -19,5 +16,5 @@ FONTSIZE = 12
 WINDOW = 1000
 
 # Results
-CSV_NAME = str(datetime.date.today())
+DATE_FORMAT = "%d-%m-%Y %H.%M"
 DB_NAME = "stats"
